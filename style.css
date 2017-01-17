@@ -1,0 +1,14 @@
+.index-wrapper{
+    margin-left: 30px;
+}
+
+#view-all{
+    color: white;
+    background: black;
+    border: 2px solid black;
+}
+#view-all:hover{
+    color: black;
+    background: white;
+    border: 2px solid black;
+}
