@@ -7,7 +7,6 @@ include ('SongClass.php');
 if(isset($_GET['id'])){
     $id = $_GET['id'];
     $song = Song::getById($id);
-    //echo '<script>console.log('.$band->id.')</script>';
 }
 
 if(isset($_GET['update'])){
@@ -25,6 +24,7 @@ if(isset($_GET['update'])){
 
 <div class="container">
     <form class="well form-horizontal" action="editSong.php" method="get" id="song_form2">
+        <input hidden name="id" value="<?php echo $song->id ?>"/>
         <fieldset>
 
             <legend>Edit Song</legend>

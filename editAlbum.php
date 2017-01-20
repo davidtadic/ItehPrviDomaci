@@ -24,6 +24,8 @@ if(isset($_GET['update'])){
 
 <div class="container">
     <form class="well form-horizontal" action="editAlbum.php" method="get" id="album_form1">
+        <input hidden name="id" value="<?php echo $album->id ?>"/>
+
         <fieldset>
 
             <legend>Edit Album</legend>
