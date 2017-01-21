@@ -4,8 +4,8 @@ include ('GenreClass.php');
 include ('BandClass.php');
 include ('AlbumClass.php');
 
-if(isset($_GET['save'])){
-    $album = new Album($_GET['name_album'], $_GET['year_published'], $_GET['band'], $_GET['genre']);
+if(isset($_POST['save'])){
+    $album = new Album($_POST['name_album'], $_POST['year_published'], $_POST['band'], $_POST['genre']);
     $album->addNewAlbum();
     header('Location: album.php');
 }
@@ -13,7 +13,7 @@ if(isset($_GET['save'])){
 
 
 <div class="container">
-    <form class="well form-horizontal" action=" " method="get" id="album_form">
+    <form class="well form-horizontal" action=" " method="post" id="album_form">
         <fieldset>
 
             <legend>Add New Album</legend>

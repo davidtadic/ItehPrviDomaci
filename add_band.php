@@ -2,8 +2,8 @@
 include ('layout.php');
 include ('GenreClass.php');
 include ('BandClass.php');
-if(isset($_GET['save'])){
-    $band = new Band($_GET['name_band'], ($_GET['year_from']." - ".$_GET['year_now']), $_GET['country'], $_GET['id_genre']);
+if(isset($_POST['save'])){
+    $band = new Band($_POST['name_band'], ($_POST['year_from']." - ".$_POST['year_now']), $_POST['country'], $_POST['id_genre']);
     $band->addNewBand();
     header('Location: band.php');
 }
@@ -12,7 +12,7 @@ if(isset($_GET['save'])){
 
 ?>
 <div class="container">
-    <form class="well form-horizontal" action=" " method="get" id="band_form">
+    <form class="well form-horizontal" action=" " method="post" id="band_form">
         <fieldset>
 
             <legend>Add New Band</legend>

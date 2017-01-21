@@ -2,15 +2,15 @@
     include ('layout.php');
     include ('GenreClass.php');
 
-    if (isset($_GET["save"])) {
-        $genre = new Genre($_GET['name_genre']);
+    if (isset($_POST["save"])) {
+        $genre = new Genre($_POST['name_genre']);
         $genre->addNewGenre();
         header('Location: genre.php');
     }
 ?>
 
 <div class="container">
-    <form class="well form-inline" action=" " method="get" id="genre_form">
+    <form class="well form-inline" action=" " method="post" id="genre_form">
         <fieldset>
 
             <legend>Add New Genre</legend>
